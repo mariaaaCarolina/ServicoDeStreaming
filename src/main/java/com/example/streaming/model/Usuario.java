@@ -16,6 +16,9 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Playlist> playlists = new ArrayList<>();
 
+    public Usuario() {
+    }
+
     public Usuario(Long id, String nome, String email, List<Playlist> playlists) {
         this.id = id;
         this.nome = nome;
@@ -54,6 +57,4 @@ public class Usuario {
     public void setPlaylists(List<Playlist> playlists) {
         this.playlists = playlists;
     }
-
-    // Construtores, Getters e Setters
 }

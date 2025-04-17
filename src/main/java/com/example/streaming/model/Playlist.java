@@ -27,6 +27,9 @@ public class Playlist {
     @ManyToMany
     private List<Musicas> musicas = new ArrayList<>();
 
+    public Playlist() {
+    }
+
     public Playlist(Long id, String nome, Usuario usuario, List<Videos> videos, List<Musicas> musicas) {
         this.id = id;
         this.nome = nome;
@@ -74,6 +77,4 @@ public class Playlist {
     public void setMusicas(List<Musicas> musicas) {
         this.musicas = musicas;
     }
-
-    // Getters e Setters
 }

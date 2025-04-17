@@ -22,6 +22,9 @@ public class Videos {
     @ManyToMany(mappedBy = "videos")
     private List<Playlist> playlists = new ArrayList<>();
 
+    public Videos() {
+    }
+
     public Videos(Long id, String titulo, String descricao, String url, List<Playlist> playlists) {
         this.id = id;
         this.titulo = titulo;
@@ -69,6 +72,4 @@ public class Videos {
     public void setPlaylists(List<Playlist> playlists) {
         this.playlists = playlists;
     }
-
-    // Getters e Setters
 }
